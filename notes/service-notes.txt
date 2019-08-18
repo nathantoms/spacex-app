@@ -1,0 +1,34 @@
+Interface
+Launch row
+- flight_id
+- flight_number
+- launch_date_utc
+- rocket_name
+
+Launch Details
+- flight_id
+- flight_number
+- launch_date_utc
+- rocket_name
+
+
+Example API https://api.spacexdata.com/v3/launches?limit=1&offset=5
+
+API base = https://api.spacexdata.com/v3
+
+String filterFields = flight_number,launch_date_utc,rocket/rocket_name
+
+Query string
+/launches/past
+limit=LAUNCH_LIST_SIZE
+&offset=(LAUNCH_LIST_SIZE * Page) - LAUNCH_LIST_SIZE
+&order=desc
+&filter=flight_number,launch_date_utc,rocket/rocket_name
+
+
+LAUNCH_LIST_SIZE = 10
+Page = 1
+
+'https://api.spacexdata.com/v3/launches?limit=' + LAUNCH_LIST_SIZE + '& offset=' + LAUNCH_LIST_SIZE * Page;
+
+https://api.spacexdata.com/v3/launches?limit=10&offset=0&filter=rocket/second_stage/payloads,flight_number,mission_name

@@ -1,0 +1,15 @@
+Home Page
+Header component
+List launches component
+- Launch pagination component
+-  Launch row component
+
+Launch Page
+Header component
+Launch details component
+- Image slider component
+-- Image component
+- Launch  component
+
+SpaceX Data service
+- getLaunchList
