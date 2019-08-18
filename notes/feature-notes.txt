@@ -1,0 +1,8 @@
+- list past launches
+-- use pagination
+- show laucnh detail view
+-- picture carousel
+
+future
+- graph with launches per year
+- success rate graph
