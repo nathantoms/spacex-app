@@ -3,22 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { LaunchesListComponent } from './launches-list/launches-list.component';
-import { LaunchesListItemComponent } from './launches-list-item/launches-list-item.component';
+import { HomePageComponent } from './pages';
+import { HttpClientModule } from '@angular/common/http';
+import { SpacexApiService } from './services';
+import { LaunchesListComponent, LaunchesListItemComponent } from './components/launches';
+import { HeaderComponent } from './components/shared';
 
 @NgModule({
    declarations: [
       AppComponent,
+      HomePageComponent,
       HeaderComponent,
       LaunchesListComponent,
       LaunchesListItemComponent
    ],
    imports: [
       BrowserModule,
-      AppRoutingModule
+      AppRoutingModule,
+      HttpClientModule
    ],
-   providers: [],
+   providers: [
+     SpacexApiService
+   ],
    bootstrap: [
       AppComponent
    ]

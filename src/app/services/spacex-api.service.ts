@@ -15,8 +15,8 @@ export class SpacexApiService {
     try {
       const queryUrl = '/launches/past';
 
-      const recordLimit = 'limit=' + LAUNCH_LIST_SIZE;
-      const offset = '&offset=' + (LAUNCH_LIST_SIZE * (page - 1));
+      const recordLimit = 'limit=' + LAUNCH_LIST_SIZE.toString();
+      const offset = '&offset=' + (LAUNCH_LIST_SIZE * (page - 1)).toString();
       const order = '&order=desc';
       const fieldFilter = '&filter=flight_number,launch_date_utc,rocket/rocket_name';
 

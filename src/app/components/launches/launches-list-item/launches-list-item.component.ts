@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-launches-list-item',
+  selector: 'spx-launches-list-item',
   templateUrl: './launches-list-item.component.html',
   styleUrls: ['./launches-list-item.component.css']
 })
