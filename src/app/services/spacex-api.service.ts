@@ -5,12 +5,17 @@ import { Observable } from 'rxjs';
 const API_BASE = 'https://api.spacexdata.com/v3';
 const LAUNCH_LIST_SIZE = 10;
 
-
 @Injectable()
 export class SpacexApiService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * @description
+   * Get previous SpaceX launches in Paginated form
+   *
+   * @param page number of page request
+   */
   public getPreviousLaunches(page: number): Observable<any> {
     try {
       const queryUrl = '/launches/past';
@@ -31,6 +36,12 @@ export class SpacexApiService {
     }
   }
 
+  /**
+   * @description
+   * Get details for a specific launch
+   *
+   * @param launchNumber Launch number for request
+   */
   public getLaunchDetails(launchNumber: string): Observable<any> {
     try {
       const queryUrl = '/launches/';

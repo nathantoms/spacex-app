@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SpacexApiService } from 'src/app/services';
 
 @Component({
@@ -8,9 +8,14 @@ import { SpacexApiService } from 'src/app/services';
 })
 export class LaunchesListComponent implements OnInit {
 
-  constructor(spacexApiService: SpacexApiService) { }
+  @Input()
+  currentPage: number = 1;
+
+  constructor(private spacexApiService: SpacexApiService) { }
 
   ngOnInit() {
+    this.spacexApiService.getPreviousLaunches(this.currentPage).subscribe((response) => {
+      console.log('*nt: response: ', response);
+    });
   }
-
 }
