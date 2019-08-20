@@ -3,7 +3,7 @@
     <p>
       <fa name="arrow-right" class="icon icon-right"></fa>
       <fa name="calendar" class="icon"></fa>
-      {{ launchDate }}
+      {{ launch.launchDate | date: 'longDate' }}
     </p>
   </div>
   <div class="launch-item-body">
@@ -15,10 +15,7 @@
     </p>
     <p>
       Launch Success:
-      <svg height="20" width="20">
-        <circle *ngIf="launch.launchStatus" cx="10" cy="10" r="8" stroke="black" stroke-width="1" fill="green" />
-        <circle *ngIf="!launch.launchStatus" cx="10" cy="10" r="8" stroke="black" stroke-width="1" fill="red" />
-      </svg>
+      <spx-launch-success-indicator [success]="launch.launchStatus"></spx-launch-success-indicator>
     </p>
   </div>
 </div>

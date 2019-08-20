@@ -41,17 +41,21 @@ export class LaunchDetailPageComponent implements OnInit {
   private getLaunchDetails(id: string) {
     this.launchLoading = true;
     this.spacexApiService.getLaunchDetails(id).subscribe((response) => {
-      this.launchDetails = {
-        flightNumber: response.flight_number,
-        launchDate: response.launch_date_utc,
-        rocketName: response.rocket.rocket_name,
-        launchStatus: response.launch_success,
-        images: response.links.flickr_images,
-        details: response.details,
-        videoId: response.links.youtube_id
-      };
+      this.launchDetails = this.getLaunchDetailModel(response);
       this.launchLoading = false;
     });
+  }
+
+  private getLaunchDetailModel(launch: any): LaunchDetails {
+    return {
+      flightNumber: launch.flight_number,
+      launchDate: launch.launch_date_utc,
+      rocketName: launch.rocket.rocket_name,
+      launchStatus: launch.launch_success,
+      images: launch.links.flickr_images,
+      details: launch.details,
+      videoId: launch.links.youtube_id
+    };
   }
 
 }

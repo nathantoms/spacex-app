@@ -3,8 +3,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'spx-image-gallery',
-  templateUrl: './image-gallery.component.html',
-  styleUrls: ['./image-gallery.component.scss']
+  templateUrl: './image-gallery.component.html'
 })
 export class ImageGalleryComponent {
 

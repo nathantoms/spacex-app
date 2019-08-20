@@ -7,11 +7,7 @@
         (launchSelected)="onLaunchSelected($event)"
       ></spx-launches-list-item>
   </div>
-  <div *ngIf="launchesLoading" class="text-center">
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>
+  <spx-loading-spinner [loading]="launchesLoading"></spx-loading-spinner>
   <div class="load-more-btn-container">
     <button
       type="button"
@@ -20,12 +16,6 @@
       [disabled]="loadMoreDisabled"
     >
       Get More Launches!
-      <span
-        *ngIf="getMoreLaunchesLoading"
-        class="spinner-border spinner-border-sm"
-        role="status"
-        aria-hidden="true"
-      ></span>
     </button>
   </div>
 </div>

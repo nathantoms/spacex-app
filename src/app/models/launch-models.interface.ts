@@ -2,14 +2,14 @@ export interface LaunchesListItem {
   flightNumber: number,
   launchDate: string,
   rocketName: string,
-  launchStatus: Boolean
+  launchStatus: boolean
 }
 
 export interface LaunchDetails {
   flightNumber: number,
   launchDate: string,
   rocketName: string,
-  launchStatus: Boolean,
+  launchStatus: boolean,
   images?: string[],
   details: string,
   videoId?: string;

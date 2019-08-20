@@ -1,0 +1,17 @@
+.dot {
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: -0.5em;
+  margin-left: 0.2em;
+  border: 0.1em solid #fff;
+}
+
+.success {
+  background: #449D44;
+}
+
+.failure {
+  background: #D9534F;
+}

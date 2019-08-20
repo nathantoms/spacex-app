@@ -19,7 +19,6 @@ export class LaunchesListComponent implements OnInit {
 
   public launchesList: Array<LaunchesListItem> = [];
   public launchesLoading  = false;
-  public getMoreLaunchesLoading = false;
   public loadMoreDisabled = false;
 
   private nextPage: number = 1;
@@ -27,7 +26,7 @@ export class LaunchesListComponent implements OnInit {
   constructor(private spacexApiService: SpacexApiService) { }
 
   ngOnInit() {
-    this.getLaunches();
+    this.getMoreLaunches();
   }
 
   /**
@@ -46,28 +45,27 @@ export class LaunchesListComponent implements OnInit {
    * Get more launch information
    */
   public getMoreLaunches() {
-    this.getMoreLaunchesLoading = true;
-    this.getLaunches();
-  }
-
-  private getLaunches() {
     this.launchesLoading = true;
     this.spacexApiService.getPreviousLaunches(this.nextPage).subscribe((response) => {
       if (response.length >= 1) {
         for (const launch of response) {
-          this.launchesList.push({
-            flightNumber: launch.flight_number,
-            launchDate: launch.launch_date_utc,
-            rocketName: launch.rocket.rocket_name,
-            launchStatus: launch.launch_success
-          });
+          const launchDetail = this.getLaunchModel(launch);
+          this.launchesList = [...this.launchesList, launchDetail];
         }
         this.nextPage += 1;
       } else {
         this.loadMoreDisabled = true;
       }
-      this.getMoreLaunchesLoading = false;
       this.launchesLoading = false;
     });
+  }
+
+  private getLaunchModel(launch: any): LaunchesListItem {
+      return {
+        flightNumber: launch.flight_number,
+        launchDate: launch.launch_date_utc,
+        rocketName: launch.rocket.rocket_name,
+        launchStatus: launch.launch_success
+      };
   }
 }

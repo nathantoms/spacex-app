@@ -11,9 +11,15 @@ import { HomePageComponent, LaunchDetailPageComponent } from './pages';
 import {
   LaunchesListComponent,
   LaunchesListItemComponent,
-  LaunchDetailComponent
+  LaunchDetailComponent,
+  LaunchSuccessIndicatorComponent
 } from './components/launches';
-import { HeaderComponent, ImageGalleryComponent, VideoPlayerComponent } from './components/shared';
+import { HeaderComponent,
+  ImageGalleryComponent,
+  VideoPlayerComponent,
+  LoadingSpinnerComponent,
+  ImageItemComponent
+} from './components/shared';
 import { AppComponent } from './app.component';
 
 // Services
@@ -32,8 +38,11 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
       LaunchesListItemComponent,
       LaunchDetailPageComponent,
       ImageGalleryComponent,
+      ImageItemComponent,
       LaunchDetailComponent,
-      VideoPlayerComponent
+      VideoPlayerComponent,
+      LoadingSpinnerComponent,
+      LaunchSuccessIndicatorComponent
    ],
    imports: [
       BrowserModule,

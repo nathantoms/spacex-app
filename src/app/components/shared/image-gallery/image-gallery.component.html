@@ -1,8 +1,7 @@
 <div class="align-center">
   <h1>Image Gallery</h1>
-  <img
+  <spx-image-item
     *ngFor="let imageUrl of imageUrls"
-    [src]="imageUrl"
-    class="image-wrapper img-thumbnail"
-  />
+    [imageUrl]="imageUrl"
+  ></spx-image-item>
 </div>
