@@ -1,21 +1,29 @@
+// Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomePageComponent } from './pages';
 import { HttpClientModule } from '@angular/common/http';
-import { SpacexApiService } from './services';
+
+// Routing
+import { AppRoutingModule } from './app-routing.module';
+
+// Components
+import { HomePageComponent, LaunchDetailPageComponent } from './pages';
 import { LaunchesListComponent, LaunchesListItemComponent } from './components/launches';
 import { HeaderComponent } from './components/shared';
+import { AppComponent } from './app.component';
+
+// Services
+import { SpacexApiService } from './services';
 
 @NgModule({
    declarations: [
       AppComponent,
       HomePageComponent,
+      LaunchDetailPageComponent,
       HeaderComponent,
       LaunchesListComponent,
-      LaunchesListItemComponent
+      LaunchesListItemComponent,
+      LaunchDetailPageComponent
    ],
    imports: [
       BrowserModule,

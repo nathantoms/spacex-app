@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { LaunchesListItem } from 'src/app/models/launch-models.interface';
 
 @Component({
   selector: 'spx-launches-list-item',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class LaunchesListItemComponent {
 
+  @Input()
+  launch: LaunchesListItem;
+
+  @Output()
+  selectLaunch = new EventEmitter<number>();
+
+  public onSelectLaunch() {
+    this.selectLaunch.emit(this.launch.flightNumber);
+  }
 }

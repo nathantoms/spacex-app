@@ -23,7 +23,7 @@ export class SpacexApiService {
       const recordLimit = 'limit=' + LAUNCH_LIST_SIZE.toString();
       const offset = '&offset=' + (LAUNCH_LIST_SIZE * (page - 1)).toString();
       const order = '&order=desc';
-      const fieldFilter = '&filter=flight_number,launch_date_utc,rocket/rocket_name';
+      const fieldFilter = '&filter=flight_number,launch_date_utc,rocket/rocket_name,launch_success';
 
       return this.http.get(
         this.buildQuery(

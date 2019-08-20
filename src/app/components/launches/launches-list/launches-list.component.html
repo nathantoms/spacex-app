@@ -1,1 +1,6 @@
-<spx-launches-list-item></spx-launches-list-item>
+<h2>Previous Launches</h2>
+<spx-launches-list-item *ngFor="let launch of launchesList" [launch]="launch"></spx-launches-list-item>
+<button type="button" class="btn btn-secondary btn-sm btn-block" (click)="getMoreLaunches()">
+    Get More Launches!
+    <span *ngIf="getMoreLaunchesLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+</button>

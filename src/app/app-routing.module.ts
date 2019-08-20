@@ -1,9 +1,16 @@
+// Angular
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePageComponent } from './pages';
+
+// Components
+import { HomePageComponent, LaunchDetailPageComponent } from './pages';
 
 
 const routes: Routes = [
+  {
+    path: '/launch/:id',
+    component: LaunchDetailPageComponent
+  },
   {
     path: '',
     component: HomePageComponent

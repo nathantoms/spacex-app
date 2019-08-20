@@ -1,3 +1,11 @@
-<p>
-  launches-list-item works!
-</p>
+<div (click)="onSelectLaunch()" class="item-row bg-light">
+    <svg height="20" width="20">
+        <circle *ngIf="launch.launchStatus" cx="10" cy="10" r="8" stroke="black" stroke-width="1" fill="green" />
+        <circle *ngIf="!launch.launchStatus" cx="10" cy="10" r="8" stroke="black" stroke-width="1" fill="red" />
+      </svg>
+    {{launch.flightNumber}}
+    {{launch.launchDate}}
+    {{launch.rocketName}}
+
+
+</div>
