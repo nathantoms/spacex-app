@@ -1,0 +1,51 @@
+@import 'variables';
+
+body {
+  background: $body-bg;
+  color: $body-color;
+  font-family: $font-family-sans-serif;
+}
+
+p {
+  margin-bottom: 0.5em;
+  font-size: 0.8em
+}
+
+h1 {
+  font-size: 1.5em;
+  padding: 0 0.75em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+.jumbotron {
+  margin: 1em 0;
+  background: $jumbotron-bg;
+  color: $white;
+  padding: 2em;
+}
+
+.navbar {
+  padding: $navbar-padding-y 0;
+  background: $blue;
+}
+
+.grey-card {
+  background: $gray-800;
+  color: $white;
+  border: 1px solid $gray-600;
+}
+
+.grey-card:hover {
+  background: $gray-700;
+}
+
+.icon {
+  margin: 0 0.5em 0 0;
+}
+
+.icon-right {
+  float: right;
+}

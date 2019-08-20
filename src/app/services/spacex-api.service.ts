@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const API_BASE = 'https://api.spacexdata.com/v3';
-const LAUNCH_LIST_SIZE = 10;
+const LAUNCH_LIST_SIZE = 9;
 
 @Injectable()
 export class SpacexApiService {

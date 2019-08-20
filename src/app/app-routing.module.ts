@@ -8,8 +8,13 @@ import { HomePageComponent, LaunchDetailPageComponent } from './pages';
 
 const routes: Routes = [
   {
-    path: '/launch/:id',
+    path: 'launch/:id',
     component: LaunchDetailPageComponent
+  },
+  {
+    path: 'home',
+    redirectTo : '',
+    pathMatch: 'full'
   },
   {
     path: '',

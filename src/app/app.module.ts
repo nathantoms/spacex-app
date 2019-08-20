@@ -15,6 +15,9 @@ import { AppComponent } from './app.component';
 // Services
 import { SpacexApiService } from './services';
 
+// Styles
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 @NgModule({
    declarations: [
       AppComponent,
@@ -28,7 +31,8 @@ import { SpacexApiService } from './services';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      HttpClientModule
+      HttpClientModule,
+      AngularFontAwesomeModule
    ],
    providers: [
      SpacexApiService
