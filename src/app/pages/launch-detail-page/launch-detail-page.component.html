@@ -1,1 +1,4 @@
-<p>launch-detail-page works!</p>
+<div class="container">
+  <div *ngIf="launchDetails">{{launchDetails.flightNumber}}</div>
+  <spx-image-gallery *ngIf="launchDetails" [imageUrls]="launchDetails.images"></spx-image-gallery>
+</div>

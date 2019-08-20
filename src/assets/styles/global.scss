@@ -20,6 +20,10 @@ h2 {
   font-size: 1em;
 }
 
+.container {
+  min-width: 25em;
+}
+
 .jumbotron {
   margin: 1em 0;
   background: $jumbotron-bg;
