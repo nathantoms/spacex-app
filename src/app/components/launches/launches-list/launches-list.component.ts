@@ -30,11 +30,21 @@ export class LaunchesListComponent implements OnInit {
     this.getLaunches();
   }
 
+  /**
+   * @description
+   * Return the URL for the specified launch
+   *
+   * @param launch Launch Number
+   */
   public onLaunchSelected(launch: string) {
     const launchPage: string = 'launch/' + launch;
     this.launchSelected.emit(launchPage);
   }
 
+  /**
+   * @description
+   * Get more launch information
+   */
   public getMoreLaunches() {
     this.getMoreLaunchesLoading = true;
     this.getLaunches();

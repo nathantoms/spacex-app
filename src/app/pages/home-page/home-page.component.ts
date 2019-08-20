@@ -7,8 +7,7 @@ import { SpacexApiService } from 'src/app/services';
 
 @Component({
   selector: 'spx-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  templateUrl: './home-page.component.html'
 })
 export class HomePageComponent {
 
@@ -17,6 +16,12 @@ export class HomePageComponent {
     private spacexApiService: SpacexApiService
   ) { }
 
+  /**
+   * @description
+   * Naviagte to a given page
+   *
+   * @param page URL of page
+   */
   public onNavigate(page: string) {
     this.router.navigate([page]);
   }

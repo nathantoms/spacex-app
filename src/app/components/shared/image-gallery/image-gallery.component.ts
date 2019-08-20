@@ -1,20 +1,14 @@
 // Angular
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'spx-image-gallery',
   templateUrl: './image-gallery.component.html',
   styleUrls: ['./image-gallery.component.scss']
 })
-export class ImageGalleryComponent implements OnInit {
+export class ImageGalleryComponent {
 
   @Input()
   imageUrls: string[];
-
-  constructor() { }
-
-  ngOnInit() {
-    console.log('*nt: imageUrls: ', this.imageUrls);
-  }
 
 }

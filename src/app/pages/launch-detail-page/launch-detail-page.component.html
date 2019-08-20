@@ -8,6 +8,12 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
-  <spx-launch-detail *ngIf="launchDetails" [launch]="launchDetails"></spx-launch-detail>
-  <spx-image-gallery *ngIf="launchDetails" [imageUrls]="launchDetails.images"></spx-image-gallery>
+  <spx-launch-detail
+    *ngIf="launchDetails"
+    [launch]="launchDetails"
+  ></spx-launch-detail>
+  <spx-image-gallery
+    *ngIf="launchDetails"
+    [imageUrls]="launchDetails.images"
+  ></spx-image-gallery>
 </div>

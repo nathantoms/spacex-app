@@ -29,6 +29,10 @@ export class LaunchesListItemComponent implements OnChanges {
     }
   }
 
+  /**
+   * @description
+   * Emit flight number of the selected launch item
+   */
   public onLaunchSelected() {
     this.launchSelected.emit(this.launch.flightNumber);
   }

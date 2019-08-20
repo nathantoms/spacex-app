@@ -1,7 +1,11 @@
 <div class="list-container">
   <h1>Previous Launches</h1>
   <div class="list-wrapper">
-      <spx-launches-list-item *ngFor="let launch of launchesList" [launch]="launch" (launchSelected)="onLaunchSelected($event)"></spx-launches-list-item>
+      <spx-launches-list-item
+        *ngFor="let launch of launchesList"
+        [launch]="launch"
+        (launchSelected)="onLaunchSelected($event)"
+      ></spx-launches-list-item>
   </div>
   <div *ngIf="launchesLoading" class="text-center">
     <div class="spinner-border" role="status">
@@ -9,9 +13,19 @@
     </div>
   </div>
   <div class="load-more-btn-container">
-    <button type="button" class="load-more-btn btn btn-secondary btn-md" (click)="getMoreLaunches()" [disabled]="loadMoreDisabled">
+    <button
+      type="button"
+      class="load-more-btn btn btn-secondary btn-md"
+      (click)="getMoreLaunches()"
+      [disabled]="loadMoreDisabled"
+    >
       Get More Launches!
-      <span *ngIf="getMoreLaunchesLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span
+        *ngIf="getMoreLaunchesLoading"
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+      ></span>
     </button>
   </div>
 </div>

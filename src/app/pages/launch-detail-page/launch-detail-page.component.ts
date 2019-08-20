@@ -30,6 +30,10 @@ export class LaunchDetailPageComponent implements OnInit {
     this.getLaunchDetails(id);
   }
 
+  /**
+   * @description
+   * Navigate back to the home screen
+   */
   public onBack() {
     this.router.navigate(['home']);
   }
