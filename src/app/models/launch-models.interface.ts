@@ -10,5 +10,6 @@ export interface LaunchDetails {
   launchDate: string,
   rocketName: string,
   launchStatus: Boolean,
-  images?: string[]
+  images?: string[],
+  details: string
 }

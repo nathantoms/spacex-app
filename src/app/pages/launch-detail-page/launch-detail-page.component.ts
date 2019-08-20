@@ -42,7 +42,8 @@ export class LaunchDetailPageComponent implements OnInit {
         launchDate: response.launch_date_utc,
         rocketName: response.rocket.rocket_name,
         launchStatus: response.launch_success,
-        images: response.links.flickr_images
+        images: response.links.flickr_images,
+        details: response.details
       };
       this.launchLoading = false;
     });
