@@ -15,6 +15,8 @@ import { LaunchDetails } from 'src/app/models/launch-models.interface';
 })
 export class LaunchDetailPageComponent implements OnInit {
 
+  public launchLoading = false;
+  public launchDate: string;
   public launchDetails: LaunchDetails;
 
   constructor(
@@ -24,7 +26,6 @@ export class LaunchDetailPageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('*nt: hello');
     const id = this.route.snapshot.paramMap.get('id');
     this.getLaunchDetails(id);
   }
@@ -34,6 +35,7 @@ export class LaunchDetailPageComponent implements OnInit {
   }
 
   private getLaunchDetails(id: string) {
+    this.launchLoading = true;
     this.spacexApiService.getLaunchDetails(id).subscribe((response) => {
       this.launchDetails = {
         flightNumber: response.flight_number,
@@ -42,7 +44,7 @@ export class LaunchDetailPageComponent implements OnInit {
         launchStatus: response.launch_success,
         images: response.links.flickr_images
       };
-      console.log('*nt: this.launchDetails: ', this.launchDetails.images);
+      this.launchLoading = false;
     });
   }
 

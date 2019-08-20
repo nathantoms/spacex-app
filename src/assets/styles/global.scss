@@ -36,6 +36,12 @@ h2 {
   background: $blue;
 }
 
+.grey-card-no-hover {
+  background: $gray-800;
+  color: $white;
+  border: 1px solid $gray-600;
+}
+
 .grey-card {
   background: $gray-800;
   color: $white;
@@ -52,4 +58,13 @@ h2 {
 
 .icon-right {
   float: right;
+}
+
+.icon-left {
+  float: left;
+}
+
+.spinner-border {
+  margin: 1em;
+  max-height: 2em;
 }

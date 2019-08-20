@@ -1,4 +1,13 @@
 <div class="container">
-  <div *ngIf="launchDetails">{{launchDetails.flightNumber}}</div>
+  <div class="back-button" (click)="onBack()">
+    <fa name="arrow-left" class="icon"></fa>
+    <p>Back</p>
+  </div>
+  <div *ngIf="launchLoading" class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
   <spx-image-gallery *ngIf="launchDetails" [imageUrls]="launchDetails.images"></spx-image-gallery>
+  <spx-launch-detail *ngIf="launchDetails" [launch]="launchDetails"></spx-launch-detail>
 </div>

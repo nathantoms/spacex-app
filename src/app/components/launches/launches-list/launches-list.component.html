@@ -3,6 +3,11 @@
   <div class="list-wrapper">
       <spx-launches-list-item *ngFor="let launch of launchesList" [launch]="launch" (launchSelected)="onLaunchSelected($event)"></spx-launches-list-item>
   </div>
+  <div *ngIf="launchesLoading" class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
   <div class="load-more-btn-container">
     <button type="button" class="load-more-btn btn btn-secondary btn-md" (click)="getMoreLaunches()" [disabled]="loadMoreDisabled">
       Get More Launches!

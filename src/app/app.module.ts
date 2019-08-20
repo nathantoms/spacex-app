@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { HomePageComponent, LaunchDetailPageComponent } from './pages';
-import { LaunchesListComponent, LaunchesListItemComponent } from './components/launches';
+import { LaunchesListComponent, LaunchesListItemComponent, LaunchDetailComponent } from './components/launches';
 import { HeaderComponent, ImageGalleryComponent } from './components/shared';
 import { AppComponent } from './app.component';
 
@@ -27,7 +27,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
       LaunchesListComponent,
       LaunchesListItemComponent,
       LaunchDetailPageComponent,
-      ImageGalleryComponent
+      ImageGalleryComponent,
+      LaunchDetailComponent
    ],
    imports: [
       BrowserModule,

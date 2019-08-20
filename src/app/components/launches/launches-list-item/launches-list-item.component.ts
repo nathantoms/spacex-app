@@ -1,5 +1,10 @@
+// Angular
 import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+
+// Models
 import { LaunchesListItem } from 'src/app/models/launch-models.interface';
+
+// Services
 import * as DateFormatter from 'date-and-time';
 
 @Component({

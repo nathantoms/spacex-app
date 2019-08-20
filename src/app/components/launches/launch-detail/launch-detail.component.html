@@ -1,0 +1,24 @@
+<div class="launch-item-row grey-card-no-hover" *ngIf="launch">
+  <div class="launch-item-header">
+    <h2>{{ launch.rocketName }} flight on {{ launchDate }}</h2>
+  </div>
+  <div class="launch-item-body">
+    <p>
+      <fa name="calendar" class="icon"></fa>
+      {{ launchDate }}
+    </p>
+    <h2>
+      <!-- Rocket Name: {{ launch.rocketName }} -->
+    </h2>
+    <p>
+      <!-- Flight Number: {{ launch.flightNumber }} -->
+    </p>
+    <p>
+      Launch Success:
+      <svg height="20" width="20">
+        <circle *ngIf="launch.launchStatus" cx="10" cy="10" r="8" stroke="black" stroke-width="1" fill="green" />
+        <circle *ngIf="!launch.launchStatus" cx="10" cy="10" r="8" stroke="black" stroke-width="1" fill="red" />
+      </svg>
+    </p>
+  </div>
+</div>

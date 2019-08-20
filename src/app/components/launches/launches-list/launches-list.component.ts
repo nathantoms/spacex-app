@@ -18,6 +18,7 @@ export class LaunchesListComponent implements OnInit {
   launchSelected = new EventEmitter<string>();
 
   public launchesList: Array<LaunchesListItem> = [];
+  public launchesLoading  = false;
   public getMoreLaunchesLoading = false;
   public loadMoreDisabled = false;
 
@@ -40,6 +41,7 @@ export class LaunchesListComponent implements OnInit {
   }
 
   private getLaunches() {
+    this.launchesLoading = true;
     this.spacexApiService.getPreviousLaunches(this.nextPage).subscribe((response) => {
       if (response.length >= 1) {
         for (const launch of response) {
@@ -55,6 +57,7 @@ export class LaunchesListComponent implements OnInit {
         this.loadMoreDisabled = true;
       }
       this.getMoreLaunchesLoading = false;
+      this.launchesLoading = false;
     });
   }
 }
