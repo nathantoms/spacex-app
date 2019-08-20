@@ -23,7 +23,7 @@ export class LaunchDetailComponent implements OnInit {
   ngOnInit() {
     if (this.launch) {
       const launchDate = new Date(this.launch.launchDate);
-      this.launchDate = DateFormatter.format(launchDate, 'ddd DD MMM \'YY');
+      this.launchDate = DateFormatter.format(launchDate, 'ddd DD MMM YYYY');
     }
   }
 
