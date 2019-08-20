@@ -11,5 +11,6 @@ export interface LaunchDetails {
   rocketName: string,
   launchStatus: Boolean,
   images?: string[],
-  details: string
+  details: string,
+  videoId?: string;
 }

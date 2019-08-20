@@ -47,7 +47,8 @@ export class LaunchDetailPageComponent implements OnInit {
         rocketName: response.rocket.rocket_name,
         launchStatus: response.launch_success,
         images: response.links.flickr_images,
-        details: response.details
+        details: response.details,
+        videoId: response.links.youtube_id
       };
       this.launchLoading = false;
     });

@@ -48,7 +48,8 @@ export class SpacexApiService {
   public getLaunchDetails(launchNumber: string): Observable<any> {
     try {
       const queryUrl = '/launches/';
-      const fieldFilter = '&filter=flight_number,launch_date_utc,rocket/rocket_name,launch_success,links/flickr_images,details';
+      let fieldFilter = '?filter=flight_number,launch_date_utc,rocket/rocket_name';
+      fieldFilter += ',launch_success,links/flickr_images,details,links/youtube_id';
 
       return this.http.get(
         this.buildQuery(

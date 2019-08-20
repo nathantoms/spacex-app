@@ -8,8 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { HomePageComponent, LaunchDetailPageComponent } from './pages';
-import { LaunchesListComponent, LaunchesListItemComponent, LaunchDetailComponent } from './components/launches';
-import { HeaderComponent, ImageGalleryComponent } from './components/shared';
+import {
+  LaunchesListComponent,
+  LaunchesListItemComponent,
+  LaunchDetailComponent
+} from './components/launches';
+import { HeaderComponent, ImageGalleryComponent, VideoPlayerComponent } from './components/shared';
 import { AppComponent } from './app.component';
 
 // Services
@@ -28,7 +32,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
       LaunchesListItemComponent,
       LaunchDetailPageComponent,
       ImageGalleryComponent,
-      LaunchDetailComponent
+      LaunchDetailComponent,
+      VideoPlayerComponent
    ],
    imports: [
       BrowserModule,

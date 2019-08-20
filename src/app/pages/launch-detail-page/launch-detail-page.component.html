@@ -13,7 +13,11 @@
     [launch]="launchDetails"
   ></spx-launch-detail>
   <spx-image-gallery
-    *ngIf="launchDetails"
+    *ngIf="launchDetails && launchDetails.images"
     [imageUrls]="launchDetails.images"
   ></spx-image-gallery>
+  <spx-video-player
+    *ngIf="launchDetails && launchDetails.videoId"
+    [videoId]="launchDetails.videoId"
+  ></spx-video-player>
 </div>
