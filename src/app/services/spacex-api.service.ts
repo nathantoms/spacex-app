@@ -58,7 +58,7 @@ export class SpacexApiService {
         )
       );
     } catch (error) {
-      console.error('Failed to get plaunch detail data: ', error);
+      console.error('Failed to get launch detail data: ', error);
     }
   }
 

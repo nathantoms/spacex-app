@@ -18,7 +18,7 @@ export class HomePageComponent {
 
   /**
    * @description
-   * Naviagte to a given page
+   * Navigate to a given page
    *
    * @param page URL of page
    */

@@ -9,7 +9,8 @@
     [launch]="launchDetails"
   ></spx-launch-detail>
   <spx-image-gallery
-    *ngIf="launchDetails && launchDetails.images"
+    *ngIf="launchDetails
+      && launchDetails.images.length >= 1"
     [imageUrls]="launchDetails.images"
   ></spx-image-gallery>
   <spx-video-player

@@ -40,9 +40,13 @@ export class LaunchDetailPageComponent implements OnInit {
 
   private getLaunchDetails(id: string) {
     this.launchLoading = true;
-    this.spacexApiService.getLaunchDetails(id).subscribe((response) => {
-      this.launchDetails = this.getLaunchDetailModel(response);
-      this.launchLoading = false;
+    this.spacexApiService.getLaunchDetails(id).subscribe((response: any) => {
+      if (response) {
+        this.launchDetails = this.getLaunchDetailModel(response);
+        this.launchLoading = false;
+      } else {
+        console.log('No response for Launch details: ', id);
+      }
     });
   }
 
