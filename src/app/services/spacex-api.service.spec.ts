@@ -10,7 +10,7 @@ import { SpacexApiService } from './spacex-api.service';
 // Mocks
 import { getLaunchesListMock, getLaunchDetailMock } from 'src/app/mocks';
 
-describe('Service: SpacexApi', () => {
+fdescribe('Service: SpacexApi', () => {
   let service: SpacexApiService;
   let spacexApi: HttpTestingController;
 
@@ -19,7 +19,7 @@ describe('Service: SpacexApi', () => {
 
   let getLaunchDetailsUrl = 'https://api.spacexdata.com/v3/launches/1';
   getLaunchDetailsUrl += '?filter=flight_number,launch_date_utc,rocket/rocket_name,';
-  getLaunchDetailsUrl += 'launch_success,links/flickr_images,details,links/youtube_id';
+  getLaunchDetailsUrl += 'launch_success,links,details';
 
   beforeEach(() => {
     TestBed.configureTestingModule({
