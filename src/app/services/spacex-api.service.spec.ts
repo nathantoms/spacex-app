@@ -10,7 +10,7 @@ import { SpacexApiService } from './spacex-api.service';
 // Mocks
 import { getLaunchesListMock, getLaunchDetailMock } from 'src/app/mocks';
 
-fdescribe('Service: SpacexApi', () => {
+describe('Service: SpacexApi', () => {
   let service: SpacexApiService;
   let spacexApi: HttpTestingController;
 
