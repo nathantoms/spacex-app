@@ -1,8 +1,11 @@
 # SpaceX App
 
-View the project here: https://spacex-app-nt.firebaseapp.com
+View deployed version [on Firebase](https://spacex-app-nt.firebaseapp.com)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+## Pre-Requisites
+
+- [NodeJS](https://nodejs.org/en/download/)
+- [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Development server
 
