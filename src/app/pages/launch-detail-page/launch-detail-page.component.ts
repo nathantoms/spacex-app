@@ -2,12 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-// Services
-import { SpacexApiService } from 'src/app/services';
-
-// Models
-import { LaunchDetails } from 'src/app/models/launch-models.interface';
-
 @Component({
   selector: 'spx-launch-detail-page',
   templateUrl: './launch-detail-page.component.html',
@@ -15,19 +9,15 @@ import { LaunchDetails } from 'src/app/models/launch-models.interface';
 })
 export class LaunchDetailPageComponent implements OnInit {
 
-  public launchLoading = false;
-  public launchDate: string;
-  public launchDetails: LaunchDetails;
+  public launchNumber;
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
-    private spacexApiService: SpacexApiService
+    private router: Router
   ) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.getLaunchDetails(id);
+    this.launchNumber = this.route.snapshot.paramMap.get('id');
   }
 
   /**
@@ -36,30 +26,6 @@ export class LaunchDetailPageComponent implements OnInit {
    */
   public onBack() {
     this.router.navigate(['home']);
-  }
-
-  private getLaunchDetails(id: string) {
-    this.launchLoading = true;
-    this.spacexApiService.getLaunchDetails(id).subscribe((response: any) => {
-      if (response) {
-        this.launchDetails = this.getLaunchDetailModel(response);
-        this.launchLoading = false;
-      } else {
-        console.log('No response for Launch details: ', id);
-      }
-    });
-  }
-
-  private getLaunchDetailModel(launch: any): LaunchDetails {
-    return {
-      flightNumber: launch.flight_number,
-      launchDate: launch.launch_date_utc,
-      rocketName: launch.rocket.rocket_name,
-      launchStatus: launch.launch_success,
-      images: launch.links.flickr_images,
-      details: launch.details,
-      videoId: launch.links.youtube_id
-    };
   }
 
 }

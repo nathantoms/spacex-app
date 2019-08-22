@@ -5,7 +5,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SpacexApiService } from 'src/app/services';
 
 // Models
-import { LaunchesListItem } from 'src/app/models/launch-models.interface';
+import { LaunchesListItem } from 'src/app/models';
 
 @Component({
   selector: 'spx-launches-list',

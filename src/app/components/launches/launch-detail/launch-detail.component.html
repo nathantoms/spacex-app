@@ -1,3 +1,4 @@
+<spx-loading-spinner [loading]="launchLoading"></spx-loading-spinner>
 <div class="launch-item-row grey-card-no-hover" *ngIf="launch">
   <div class="launch-item-header">
     <p class="icon-right">
@@ -24,3 +25,12 @@
     </p>
   </div>
 </div>
+<spx-image-gallery
+    *ngIf="launch
+      && launch.images.length >= 1"
+    [imageUrls]="launch.images"
+></spx-image-gallery>
+<spx-video-player
+  *ngIf="launch && launch.videoId"
+  [videoId]="launch.videoId"
+></spx-video-player>

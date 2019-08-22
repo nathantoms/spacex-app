@@ -3,18 +3,8 @@
     <fa name="arrow-left" class="icon"></fa>
     <p>Back</p>
   </div>
-  <spx-loading-spinner [loading]="launchLoading"></spx-loading-spinner>
   <spx-launch-detail
-    *ngIf="launchDetails"
-    [launch]="launchDetails"
+    *ngIf="launchNumber"
+    [launchNumber]="launchNumber"
   ></spx-launch-detail>
-  <spx-image-gallery
-    *ngIf="launchDetails
-      && launchDetails.images.length >= 1"
-    [imageUrls]="launchDetails.images"
-  ></spx-image-gallery>
-  <spx-video-player
-    *ngIf="launchDetails && launchDetails.videoId"
-    [videoId]="launchDetails.videoId"
-  ></spx-video-player>
 </div>

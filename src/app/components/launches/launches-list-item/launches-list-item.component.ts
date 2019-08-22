@@ -2,7 +2,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 // Models
-import { LaunchesListItem } from 'src/app/models/launch-models.interface';
+import { LaunchesListItem } from 'src/app/models';
 
 @Component({
   selector: 'spx-launches-list-item',
