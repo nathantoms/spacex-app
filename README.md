@@ -7,6 +7,10 @@ View deployed version [on Firebase](https://spacex-app-nt.firebaseapp.com)
 - [NodeJS](https://nodejs.org/en/download/)
 - [Angular CLI](https://github.com/angular/angular-cli)
 
+## Setup
+
+Run `npm install` to install node modules
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
